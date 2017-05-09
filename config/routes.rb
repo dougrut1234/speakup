@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :views
+  devise_for :installs
   get 'home/index'
 
   devise_for :users
