@@ -2,12 +2,8 @@
   <h1 id ="speak-up">Speak UP </h1>
 </div>
 
-<div id="video-background">
-<%= video_tag "townhallmv.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
-</div>
-
-<div style='width: 800px;'>
-  <div id="geolocation" style='width: 800px; height: 400px;'></div>
+<div id="home-background">
+<%= image_tag("town-hall-banner.jpg", :size => "1160x640")%>
 </div>
 
 
@@ -19,3 +15,5 @@
 <div id= "h2-banner">
   <h2 id ="directions">Enter your town or zip code to search upcoming town hall meetings near you:</h2>
 </div>
+
+  <div id="geolocation"></div>
