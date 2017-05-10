@@ -12,6 +12,29 @@
 
 ActiveRecord::Schema.define(version: 20170509192344) do
 
+  create_table "events", force: :cascade do |t|
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.datetime "time_date"
+    t.string   "title"
+    t.string   "description"
+    t.decimal  "locationx"
+    t.decimal  "locationy"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "city"
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "installs", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
