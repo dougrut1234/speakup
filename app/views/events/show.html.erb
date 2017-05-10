@@ -1,9 +1,13 @@
-<% @events.each do |event| %>
+<h1>EVENT</h1>
 
-<h1><%= @event.address1 %>
-<h1><%= @event.city%>, <%= @event.state%> <%=@event.zip%></h1>
-<h1>Date of Event:</h1><%= @event.time_date %>
-<h1>Title: <%= @event.title %></h1>
-<h1>Description: <%= @event.description%></h1>
+<h4><%= @event.address1 %></h4>
+<h4><%= @event.city%>, <%= @event.state%> <%=@event.zip%></h4>
+<h4>Date of Event:</h4><h4><%= @event.time_date %></h4>
+<h4>Title: <%= @event.title %></h4>
+<h4>Description: <%= @event.description%></h4>
 
 
+ <%= link_to("Edit Event!", edit_event_path(@event)) %>
+<p>
+ <%= link_to("All Events!", "/events/") %>
+</p>

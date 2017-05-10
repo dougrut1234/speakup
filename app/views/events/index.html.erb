@@ -2,11 +2,16 @@
 
 <% @events.each do |event| %>
 
-<ol>
+<ul>
+<div>
 <h2><%= event.city%>, <%= event.state%> <%=event.zip%></h2>
 <h4>Date of Event:</h4><%= event.time_date %>
 <h4>Title: <%= event.title %></h4>
 <h4>Description: <%= event.description%></h4>
-</ol>
+</div>
+</ul>
+
+ <%= link_to("Show!", event_path(event)) %>
+ <h3><%= link_to("Cancel Event", event_path(event), method: :delete) %></h3>
 
 <% end %>

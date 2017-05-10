@@ -6,6 +6,7 @@ end
 
 def show
 	@profile = Profile.find(params[:id])
+	@events = Event.all
 end
 
 def new
@@ -14,15 +15,13 @@ end
 
 def create
 	@profile = Profile.new(profile_params)
-		if @profile.save
-			flash[:notice] = "Your location has been saved."
-			redirect_to "/profiles/"
-		else
-			flash[:notice] = "Your job was NOT created."
-			redirect_to "/profiles/new"
-		end
+	if @profile.save
+		flash[:notice] = "Your location has been saved."
+		redirect_to profile_path(@profile)
+	else
+		flash[:notice] = "Your profile was NOT created."
+		redirect_to "/events/"
 	end
-
 end
 
 def edit
@@ -33,16 +32,19 @@ end
 def update
 	@profile = Profile.find(params[:id])
 	@profile.city = params[:profile][:city]
-		if @job.save
-			redirect_to profile_path
-		else
-			redirect_to "/profiles/"
-		end
+	puts @profile
+	if @profile.save
+		redirect_to profile_path
+	else
+		redirect_to "/profiles/"
+	end
 end
+
 
 private
     
     def profile_params
-      params.require(:profile).permit(:city, :user_id, :event_id)
+      params.require(:profile).permit(:city)
     
     end
+end
