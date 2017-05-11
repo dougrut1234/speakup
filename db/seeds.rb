@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(email: "dougrut1234@aol.com", password: "123456")
 User.create(email: "leilamafoud@gmail.com", password: "123456")
-Event.create(address1: "30 Wyckoff Ave", address2: "", city: "Ramsey", state: "New Jersey", zip:"07446", time_date: "5:00", title: "HEALTHCARE REFORM", description: "Talk to your congressman about your health bills")
+Event.create(address1: "30 Wyckoff Ave", address2: "", city: "Ramsey", state: "New Jersey", zip: "07446", time_date: "5:00", title: "HEALTHCARE REFORM", description: "Talk to your congressman about your health bills")
 Event.create(address1: "10 Richmond Terrace", address2: "", city: "Staten Island", state: "New York", zip:"10301", time_date: "5:00", title: "Water Bills", description: "Talk to your congressman about your water bills")

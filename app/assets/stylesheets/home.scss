@@ -84,7 +84,15 @@ h1 {
     background-repeat: no-repeat;
     width:800px;
     height:auto;
-
     background-size: cover;
-    z-index: 0;
-  }
+    z-index: -1;
+}
+
+#search-form {
+  text-align: center;
+  z-index: 100;
+  margin-top: 500px;
+  height:30px;
+  width:600px;
+  background-color: #ffffff;
+}

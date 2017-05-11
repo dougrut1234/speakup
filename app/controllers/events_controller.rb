@@ -1,7 +1,12 @@
 class EventsController < ApplicationController
-	
+
 def index
 	@events = Event.all
+	 if params[:search]
+	   @events = Event.search(params[:search]).order("created_at DESC")
+	 else
+	   @events = Event.all.order('created_at DESC')
+	 end
 end
 
 def show
@@ -28,7 +33,7 @@ end
 def edit
 	@event = Event.find(params[:id])
 end
-	
+
 
 def update
 	@event = Event.find(params[:id])
@@ -48,10 +53,8 @@ def update
 end
 
 private
-    
+
     def event_params
       params.require(:event).permit(:address1, :address2, :city, :state, :zip, :time_date, :title, :description)
-    
+
     end
-
-
