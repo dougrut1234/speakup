@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170511003033) do
+ActiveRecord::Schema.define(version: 20170511223628) do
 
   create_table "events", force: :cascade do |t|
     t.string   "address1"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170511003033) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
-    t.datetime "time_date"
+    t.string   "time_date"
     t.string   "title"
     t.string   "description"
     t.decimal  "locationx"

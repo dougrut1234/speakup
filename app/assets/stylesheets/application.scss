@@ -22,7 +22,7 @@
 }
 
 #title {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 #shift {
@@ -40,8 +40,8 @@
 	padding-left: 50px;
 	padding-top: 10x;
 	padding-bottom: 5px;
-	border-style: solid; 
-	border-width: 2px;
+	border-style: solid;
+	border-width: 10px;
 	margin-right: 5%
 }
 
@@ -61,4 +61,26 @@
 
 h1 {
 	color: #0052A5;
+  text-align: center;
+  font-size:42px;
+  font-family: 'Paytone One', sans-serif;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size:24px;
+  font-weight: bolder;
+
+}
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size:18px;
+}
+
+#show {
+  display: inline-block;
+}
+
+#cancel {
+  display: inline-block;
 }

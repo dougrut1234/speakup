@@ -52,6 +52,11 @@ def update
 		end
 end
 
+def destroy
+    Event.find(params[:id]).destroy
+        redirect_to "/events/"
+end
+
 private
 
     def event_params
