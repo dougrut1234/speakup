@@ -15,3 +15,8 @@
  <h3><%= link_to("Cancel Event", event_path(event), method: :delete) %></h3>
 
 <% end %>
+
+<%= form_tag(events_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Events" %>
+<%= submit_tag "Search" %>
+<% end %>

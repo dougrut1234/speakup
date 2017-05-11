@@ -1,11 +1,12 @@
-<h1>EVENT</h1>
+<h1>Events near <%=@profile.city %>!</h1>
 
-<h4><%= @event.address1 %></h4>
-<h4><%= @event.city%>, <%= @event.state%> <%=@event.zip%></h4>
-<h4>Date of Event:</h4><h4><%= @event.time_date %></h4>
-<h4>Title: <%= @event.title %></h4>
-<h4>Description: <%= @event.description%></h4>
+<% @events.each do |event| %>
 
+<%= event.description %>
+
+<% end %>
+
+<%= link_to("Add Event", "/events/new") %>
 
  <%= link_to("Edit Event!", edit_event_path(@event)) %>
 <p>

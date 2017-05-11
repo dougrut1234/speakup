@@ -1,8 +1,14 @@
 class EventsController < ApplicationController
-	
+
 	def index
 		@events = Event.all
+		 if params[:search]
+		   @events = Event.search(params[:search]).order("created_at DESC")
+		 else
+		   @events = Event.all.order('created_at DESC')
+		 end
 	end
+
 
 	def show
 		@event = Event.find(params[:id])
@@ -14,14 +20,14 @@ class EventsController < ApplicationController
 
 	def create
 		@event = Event.new(event_params)
-			if @event.save
-				flash[:notice] = "Your event was added."
-				redirect_to "/events/"
-			else
-				flash[:notice] = "Your event was NOT added."
-				redirect_to "/events/new"
-			end
+		if @event.save
+			flash[:notice] = "Your event was added."
+			redirect_to "/events/"
+		else
+			flash[:notice] = "Your event was NOT added."
+			redirect_to "/events/new"
 		end
+	end
 
 	def edit
 		@event = Event.find(params[:id])
@@ -57,7 +63,6 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:address1, :address2, :city, :state, :zip, :time_date, :title, :description)
     
-    end
-    
+    end   
 end
 
