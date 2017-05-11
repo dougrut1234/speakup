@@ -16,16 +16,33 @@ p {
 }
 
 #speak-up {
-  margin-left: -16%;
+  margin-left: -195px;
   margin-top: 3%;
   text-align: center;
   display: inline-block;
   color:#ffffff;
   z-index: 2;
   position: absolute;
-  font-size: 80px;
-  font-family: 'Arya', sans-serif;
+  font-size: 90px;
+  font-family: 'Permanent Marker', cursive;
+=======
+
+#speak-up {
+  #speak-up {
+    margin-left: -195px;
+    margin-top: 3%;
+    text-align: center;
+    display: inline-block;
+    color:#ffffff;
+    z-index: 2;
+    position: absolute;
+    font-size: 90px;
+    font-family: 'Permanent Marker', cursive;
 }
+
+ .last-word {
+   color:red;
+ }
 
 #h1-banner {
   text-align: center;
@@ -115,9 +132,8 @@ p {
   margin-left: 7.5%;
   margin-right: 7.5%;
   width:70%;
-  outline-color: #ffffff;
-  outline-width: thick;
   text-align: center;
+  border-color: #000000;
 }
 
 input#button {
@@ -132,7 +148,11 @@ border-width: thin;
 }
 
 a.navbar-link {
+  display: inline-block;
+  margin-right: 10px;
   text-decoration: none;
-  float:left;
+  margin-left: 50%;
   color:black;
+  float:right;
+  padding-right: 5%;
 }
