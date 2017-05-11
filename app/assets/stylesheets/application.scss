@@ -23,6 +23,7 @@
 
 #title {
     text-transform: uppercase;
+    text-decoration: underline;
 }
 
 #shift {
@@ -42,7 +43,8 @@
 	padding-bottom: 5px;
 	border-style: solid; 
 	border-width: 2px;
-	margin-right: 5%
+	margin-right: 5%;
+	padding-right: 30px;
 }
 
 #show {
@@ -53,6 +55,7 @@
 #cancel {
 	font-family: impact;
 	text-decoration: underline;
+	color: red;
 }
 
 #show:hover {
@@ -61,4 +64,14 @@
 
 h1 {
 	color: #0052A5;
+}
+
+#photo {
+	margin-top: -150px;
+	margin-bottom: 100px;
+	position: absolute;
+}
+
+h5 {
+	color: red;
 }
