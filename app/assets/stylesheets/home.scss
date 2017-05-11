@@ -42,9 +42,9 @@ h1 {
   position: absolute;
   height:24%;
   margin-top: 130px;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
   min-width: 300px;
   background-color: #000000;
   opacity: 0.7;
@@ -75,7 +75,7 @@ h1 {
 
 #geolocation {
     position: fixed;
-    margin-top: 640px;
+    margin-top: 700px;
     float:right;
     width:450px;
     margin-left: 5%;
@@ -89,19 +89,21 @@ h1 {
     // position: absolute;
     // text-align: center;
     background-repeat: no-repeat;
-    width: 90%;
+    width: 92%;
     // height: auto;
     background-size: cover;
     z-index: -10;
     opacity: 0.8;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 4%;
+    margin-right: 4%;
     background-image: url("town-hall-banner.jpg");
-    padding-bottom: 60%;
+    padding-bottom: 50%;
     max-width: 100%;
+    position: static;
+    margin-top: -300px;
 }
 
-#search-form {
+#search {
   text-align: center;
   z-index: 100;
   width:50%;
@@ -111,4 +113,5 @@ h1 {
   z-index:50;
   opacity: 1;
   height:20px;
+  margin-top: 300px;
 }
