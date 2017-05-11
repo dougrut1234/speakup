@@ -5,6 +5,5 @@ class Event < ApplicationRecord
 
 def self.search(search)
  where("city LIKE ?", "%#{search}%")
- where("city LIKE ?", "%#{search}%")
 	end
 end
