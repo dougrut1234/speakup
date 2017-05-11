@@ -15,3 +15,50 @@
  */
 
  @import "materialize";
+
+#move {
+	margin-left: 50px;
+	margin-top: 30px;
+}
+
+#title {
+    text-transform: uppercase;
+}
+
+#shift {
+	margin-left: 25%;
+}
+
+#move_create {
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 30px;
+}
+
+#space {
+	margin-top: 15px;
+	padding-left: 50px;
+	padding-top: 10x;
+	padding-bottom: 5px;
+	border-style: solid; 
+	border-width: 2px;
+	margin-right: 5%
+}
+
+#show {
+	font-family: impact;
+	text-decoration: underline;
+}
+
+#cancel {
+	font-family: impact;
+	text-decoration: underline;
+}
+
+#show:hover {
+	color: black;
+}
+
+h1 {
+	color: #0052A5;
+}
