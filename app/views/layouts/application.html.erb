@@ -42,7 +42,24 @@
         // be aware chrome >= 50 requires https for geolocation to work
         if(navigator.geolocation)
           navigator.geolocation.getCurrentPosition(displayOnMap);
-      });
+      }
+      // function(){
+      //     markers = handler.addMarkers([
+      //       {
+      //         "lat": 41.055887,
+      //         "lng": -74.146631,
+      //         "picture": {
+      //           "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
+      //           "width":  32,
+      //           "height": 32
+      //         },
+      //         "infowindow": "hello!"
+      //       }
+      //     ]);
+      //     handler.bounds.extendWith(markers);
+      //     handler.fitMapToBounds();
+      //   }
+      );
 
       function displayOnMap(position){
         var marker = handler.addMarker({
@@ -51,6 +68,63 @@
         });
         handler.map.centerOn(marker);
       };
+
+      function displayOnMap(){
+        var markers = handler.addMarkers([
+          {
+            "lat": 41.055887,
+            "lng": -74.146631,
+            "infowindow" : "HEALTHCARE REFORM"
+          },
+          {
+            "lat": 40.642409,
+            "lng": -74.076036,
+            "infowindow" : "Water Bills"
+          },
+          {
+            "lat": 40.621393,
+            "lng": -74.006671,
+            "infowindow" : "The New America"
+          },
+          {
+            "lat": 40.872534,
+            "lng": -73.893391,
+            "infowindow" : "I Am A Solution"
+          },
+          {
+            "lat": 40.706092,
+            "lng": -73.922471,
+            "infowindow" : "She's the Boss: Black Women at Work"
+          },
+          {
+            "lat": 42.061112,
+            "lng": -76.818928,
+            "infowindow" : "Southport Town Hall Meeting"
+          },
+          {
+            "lat": 42.411745,
+            "lng": -77.416597,
+            "infowindow" : "Town of Avoca Town Hall Meeting"
+          },
+          {
+            "lat": 41.056094,
+            "lng": -73.542164,
+            "infowindow" : "Town Hall w/ Sen. Chris Murphy"
+          },
+          {
+            "lat": 43.303043,
+            "lng": -73.581468,
+            "infowindow" : "American Health Care Act"
+          },
+          {
+            "lat": 42.249239,
+            "lng": -73.785824,
+            "infowindow" : "Rally to Stop Trumpcare"
+          }
+        ]);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      }
 
     </script>
   </body>
