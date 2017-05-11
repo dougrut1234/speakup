@@ -2,25 +2,26 @@
   <h1 id ="speak-up">Speak UP </h1>
 </div>
 
+  <%= link_to("OUR EVENTS!", "/events/") %>
+
 <div id="home-background">
 
-<%= link_to("OUR EVENTS!", "/events/") %>
-<%= image_tag("town-hall-banner.jpg", :size => "1160x640")%>
+  <%= form_tag(events_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Events" %>
+    <%= submit_tag "Search" %>
+  <% end %>
+
+  <% if @events.present? %>
+    <%= render @events %>
+  <% else %>
+    <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+  <% end %>
+
 </div>
 
-<%= form_tag(events_path, :method => "get", id: "search-form") do %>
-<%= text_field_tag :search, params[:search], placeholder: "Search Events" %>
-<%= submit_tag "Search" %>
-<% end %>
-
-<% if @events.present? %>
-  <%= render @events %>
-<% else %>
-  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
-<% end %>
 
 <div id= "h2-banner">
   <h2 id ="directions">Enter your town or zip code to search upcoming town hall meetings near you:</h2>
 </div>
 
-  <div id="geolocation"></div>
+<div id="geolocation"></div>
