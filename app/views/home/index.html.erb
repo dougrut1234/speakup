@@ -1,12 +1,10 @@
 <div id= "h1-banner">
-  <h1 id ="speak-up">Speak <p id="up">UP</p> </h1>
+  <h1 id ="speak-up">Speak <span class="last-word">Up</span></h1>
 </div>
 
 <div id= "h2-banner">
   <h2 id ="directions">Enter your town or zip code to search upcoming town hall meetings near you:</h2>
 </div>
-
-  <%= link_to("OUR EVENTS!", "/events/") %>
 
 <div id="home-background">
 <div id="search">
@@ -14,7 +12,7 @@
   <%= form_tag(events_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Events" %>
 
-    <%= submit_tag "Search", id: "button" %>
+    <%= submit_tag "SEARCH", id: "button" %>
   <% end %>
 
   <% if @events.present? %>
