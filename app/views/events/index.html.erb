@@ -1,12 +1,28 @@
-<h1>ALL EVENTS</h1>
+<h1> - ALL EVENTS - </h1>
 
-<% @events.each do |event| %>
 
-<ol>
-<h2><%= event.city%>, <%= event.state%> <%=event.zip%></h2>
-<h4>Date of Event:</h4><%= event.time_date %>
-<h4>Title: <%= event.title %></h4>
-<h4>Description: <%= event.description%></h4>
-</ol>
+<div id="move_create"><%= link_to("Create Event", "/events/new", {:style => 'color: #0052A5'}) %></div>
+	<div id="move">
+		<% @events.each do |event| %>
+	<div>
 
+<div id = "space">
+	<h3><b><%= event.city%>, <%= event.state%> <%=event.zip%></b></h3>
+<div id="shift"><h3 id ="title"><%= event.title %></h3>
+	<h4>Description: <%= event.description%></h4>
+	<h4>Date of Event: <%= event.time_date %></h4>
+</div>
+
+
+
+ <h5 id="show"><%= link_to("Show", event_path(event), {:style => 'color: #0052A5'}) %></h5>
+ <h5 id="cancel"><%= link_to("Cancel Event", event_path(event), method: :delete) %></h5>
+ </div>
+
+<% end %>
+</div>
+
+<%= form_tag(events_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Events" %>
+<%= submit_tag "Search" %>
 <% end %>
