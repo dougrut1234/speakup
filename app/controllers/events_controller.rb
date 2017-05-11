@@ -18,7 +18,7 @@ def create
 			flash[:notice] = "Your event was added."
 			redirect_to "/events/"
 		else
-			flash[:notice] = "Your event was NOT added."
+			flash[:notice] = "Your event was NOT added!"
 			redirect_to "/events/new"
 		end
 	end
