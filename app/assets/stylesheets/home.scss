@@ -8,7 +8,6 @@ body {
 
 h1 {
   text-align: center;
-  font-family: 'Arya', sans-serif;
 }
 
 p {
@@ -26,7 +25,24 @@ p {
   position: absolute;
   font-size: 90px;
   font-family: 'Permanent Marker', cursive;
+=======
+
+#speak-up {
+  #speak-up {
+    margin-left: -195px;
+    margin-top: 3%;
+    text-align: center;
+    display: inline-block;
+    color:#ffffff;
+    z-index: 2;
+    position: absolute;
+    font-size: 90px;
+    font-family: 'Permanent Marker', cursive;
 }
+
+ .last-word {
+   color:red;
+ }
 
 #h1-banner {
   text-align: center;
@@ -116,9 +132,8 @@ p {
   margin-left: 7.5%;
   margin-right: 7.5%;
   width:70%;
-  outline-color: #ffffff;
-  outline-width: thick;
   text-align: center;
+  border-color: #000000;
 }
 
 input#button {
