@@ -16,7 +16,7 @@ h1 {
 }
 
 p {
-  color:red;
+  color:#FF0000;
   display:inline;
 }
 
@@ -33,7 +33,7 @@ p {
 }
 
  .last-word {
-   color:red;
+   color:#FF0000;
  }
 
 #h1-banner {
@@ -74,16 +74,6 @@ p {
   z-index: 3;
 }
 
-#geolocation {
-    position: fixed;
-    margin-top: 100px;
-    margin-bottom: 5%;
-    height:500px;
-    width:650px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #home-background {
     // position: absolute;
     // text-align: center;
@@ -99,7 +89,7 @@ p {
     padding-bottom: 50%;
     max-width: 100%;
     position: static;
-    margin-top: -300px;
+    margin-top: -270px;
 }
 
 #search {
@@ -147,8 +137,4 @@ a.navbar-link {
   float:right;
   padding-right:40px;
   font-weight: bold;
-}
-
-#location-container {
-  display:flex;
 }

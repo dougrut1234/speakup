@@ -70,11 +70,11 @@ h3 {
   font-family: 'Open Sans', sans-serif;
   font-size:24px;
   font-weight: bolder;
-
 }
-h4 {
+
+h2#directions {
   font-family: 'Open Sans', sans-serif;
-  font-size:18px;
+  font-size:14px;
 }
 
 #show {
@@ -83,4 +83,9 @@ h4 {
 
 #cancel {
   display: inline-block;
+}
+
+#sign-up-container {
+width:60%;
+margin-left: 40px;
 }

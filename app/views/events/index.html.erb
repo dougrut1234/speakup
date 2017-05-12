@@ -1,7 +1,9 @@
-<h1> ALL EVENTS in <%=(params[:search])%> </h1>
+<h1> ALL EVENTS in <span class="last-word"><%=(params[:search])%></span></h1>
 
+<div id="location-container">
+  <div id="geolocation"></div>
+</div>
 
-<div id="move_create"><%= link_to("Create Event", "/events/new", {:style => 'color: #0052A5'}) %></div>
 	<div id="move">
 		<% @events.each do |event| %>
 	<div>

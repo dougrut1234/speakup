@@ -1,9 +1,5 @@
-<h1>Events near <%=@profile.city %>!</h1>
 
-<% @events.each do |event| %>
 
-<%= event.description %>
-
-<% end %>
+<%= @event.description %>
 
 <%= link_to("Add Event", "/events/new") %>

@@ -1,7 +1,8 @@
 <h1>Add Your City!</h1>
-
-	<%= form_for(@profile) do |form| %>  
-	<%= form.label :city %>:   
-	<%= form.text_field :city %>  
+<div id="sign-up-container">
+	<%= form_for(@profile) do |form| %>
+	<%= form.label :city %>:
+	<%= form.text_field :city %>
 <%= form.submit "Update" %>
 <% end %>
+</div>
