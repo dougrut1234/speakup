@@ -1,4 +1,4 @@
-<h1> ALL EVENTS in <span class="last-word"><%=(params[:search])%></span></h1>
+<h1 id ="title-shift"> ALL EVENTS in <span class="last-word"><%=(params[:search])%></span></h1>
 
 <div id="location-container">
   <div id="geolocation"></div>
@@ -10,15 +10,18 @@
 
 <div id = "space">
 	<h3><b><%= event.city%>, <%= event.state%> <%=event.zip%></b></h3>
-<div id="shift"><h3 id ="title"><%= event.title %></h3>
-	<h4>Description: <%= event.description%></h4>
-	<h4>Date of Event: <%= event.time_date %></h4>
+<div id="shift"><h4 id ="title"><%= event.title %></h4>
+	<h5><i>Description:</i></h5></h6> <%= event.description%></h6>
+	<h5><i>Date of Event:</i></h5> <h6><%= event.time_date %></h6>
 </div>
 
-
-
- <h5 id="show"><%= link_to("Show", event_path(event), {:style => 'color: #0052A5'}) %></h5>
- <h5 id="cancel"><%= link_to("Cancel Event", event_path(event), method: :delete) %></h5>
+<p class="navbar-text pull-right">
+<% if user_signed_in? %>
+<h5 id="show"><%= link_to("Show", event_path(event), {:style => 'color:#0052A5'}) %></h5>
+<h5 id="cancel"><%= link_to("Cancel Event", event_path(event), method: :delete) %></h5>
+<% else %>
+<% end %>
+</p>
  </div>
 
 <% end %>

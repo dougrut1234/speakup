@@ -60,7 +60,8 @@ p {
   margin-right: 2.5%;
   background-color: #000000;
   z-index: 2;
-  opacity: 0.75;
+  opacity: 0.8;
+  word-spacing: 3px;
 }
 
 #directions {
@@ -70,8 +71,9 @@ p {
   width:95%;
   margin-left: 2.5%;
   margin-right: 2.5%;
-  font-family: 'Bowlby One', cursive;
+  font-family: 'Open Sans', sans-serif;
   z-index: 3;
+  font-weight: bold;
 }
 
 #home-background {
@@ -86,10 +88,10 @@ p {
     margin-left: 2.5%;
     margin-right: 2.5%;
     background-image: url("town-hall-banner.jpg");
-    padding-bottom: 50%;
+    padding-bottom: 60%;
     max-width: 100%;
     position: static;
-    margin-top: -270px;
+    margin-top: -240px;
 }
 
 #search {
@@ -137,4 +139,6 @@ a.navbar-link {
   float:right;
   padding-right:40px;
   font-weight: bold;
+  margin-top: -20px;
+  color: #0052A5;
 }

@@ -28,7 +28,7 @@ def create
 		end
 	end
 
-end
+
 
 def edit
 	@event = Event.find(params[:id])
@@ -63,3 +63,4 @@ private
       params.require(:event).permit(:address1, :address2, :city, :state, :zip, :time_date, :title, :description)
 
     end
+end
