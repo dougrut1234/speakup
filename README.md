@@ -1,24 +1,19 @@
-# README
+# SpeakUp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SpeakUp is a web app designed to promote civic engagement by informing users of nearby town hall meetings where they can speak directly to key decision makers in government. 
 
-Things you may want to cover:
+## Ruby version
 
-* Ruby version
+2.4.1
 
-* System dependencies
+## System dependencies
 
-* Configuration
+Ruby on Rails, Bundler
 
-* Database creation
+## Usage instructions
 
-* Database initialization
+```bundle install```
 
-* How to run the test suite
+```rails db:migrate```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```rails db:seed```
